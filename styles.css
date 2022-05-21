@@ -1,0 +1,388 @@
+/* default styling and variables */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-gray-magenta: hsl(303, 10%, 53%);
+  --light-gray-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+  --spartan: "League Spartan", sans-serif;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+/* end default styling and variables */
+
+body {
+  background-color: var(--white);
+  font-family: var(--spartan);
+  padding: 0;
+  margin: 0;
+}
+
+/* background image styling */
+
+.background-box {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.background-top {
+  background-image: url(./images/bg-pattern-top-desktop.svg);
+  background-position: top left;
+  background-repeat: no-repeat;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100vw;
+}
+
+.background-bottom {
+  background-image: url(./images/bg-pattern-bottom-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  bottom: 0;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  width: 100vw;
+}
+
+/* end background image styling */
+
+/* container for top of page content */
+
+.top-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 12rem 11vw 5rem;
+}
+
+/* end container */
+
+/* hero message styling */
+
+.hero-message {
+  width: 30vw;
+}
+
+.hero-message h1 {
+  color: var(--dark-magenta);
+  font-size: 5.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.hero-message p {
+  color: var(--dark-gray-magenta);
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+/* end hero message styling */
+
+/* star reviews styling */
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 37vw;
+}
+
+.reviews h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-top: 1.7rem;
+}
+
+.star-review {
+  align-items: center;
+  background-color: var(--light-gray-magenta);
+  border-radius: 1rem;
+  color: var(--dark-magenta);
+  display: flex;
+  height: 5.5rem;
+  margin: 1.7rem 0;
+  width: 31vw;
+}
+
+.five-stars {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2vw;
+  width: 8vw;
+}
+
+.ratings-2 {
+  margin: 0 auto;
+}
+
+.ratings-3 {
+  align-self: flex-end;
+}
+
+/* end star reviews styling */
+
+/* styling bottom comments */
+
+.testimonials {
+  display: flex;
+  gap: 2vw;
+  justify-content: center;
+  margin-bottom: 5rem;
+  width: 100vw;
+}
+
+.comment-box {
+  background-color: var(--dark-magenta);
+  border-radius: 1rem;
+  height: 25rem;
+  padding: 3.5rem 3rem 4rem;
+  width: 24.5vw;
+}
+
+.iroberts {
+  margin-top: 2rem;
+}
+
+.awallace {
+  margin-top: 4rem;
+}
+
+.comment-box img {
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+}
+
+.user-info {
+  align-items: center;
+  display: flex;
+  font-size: 1.5rem;
+}
+
+.user-info-text {
+  display: flex;
+  flex-direction: column;
+  height: 3.5rem;
+  justify-content: space-between;
+  margin-left: 2rem;
+}
+
+.user-info-text h3 {
+  color: var(--white);
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+.user-info-text p {
+  color: var(--soft-pink);
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.comment-box blockquote {
+  color: var(--white);
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: .01rem;
+  line-height: 2rem;
+  margin: 3rem 0 1rem;
+}
+
+.quote-start {
+  margin-right: .5rem;
+}
+
+.quote-end {
+  margin-left: .5rem;
+}
+/* end styling bottom comments */
+
+footer {
+  background-color: var(--light-gray-magenta);
+  bottom: 0;
+  color: var(--dark-gray-magenta);
+  font-size: 1.4rem;
+  height: fit-content;
+  padding: .7rem;
+  position: fixed;
+  text-align: right;
+  width: 100%;
+}
+
+footer a {
+  color: var(--dark-magenta);
+  text-decoration: none;
+}
+
+/* Start media query styling */
+
+@media only screen and (max-width: 1200px) {
+  .hero-message {
+    width: 35vw;
+  }
+  
+  .reviews {
+    align-items: flex-end;
+    width: 20vw;
+  }
+
+  .five-stars {
+    margin: 0 1vw;
+  }
+
+  .ratings-2 {
+    margin: 0;
+  }
+
+  .comment-box {
+    height: 27rem;
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .hero-message {
+    width: 40vw;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .star-review {
+    display: flex;
+    flex-direction: column;
+    height: 7.5rem;
+    justify-content: center;
+    padding-top: 1.5rem;
+  }
+
+  .five-stars {
+    margin: 0 auto;
+    width: 15vw;
+  }
+
+  .comment-box {
+    height: fit-content;
+  }
+}
+
+/* center user info text, only for 701px - 1000px screen width */
+
+@media only screen and (min-width: 701px) and (max-width: 1000px) {
+  .comment-box {
+    height: 40rem;
+  }
+  .user-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user-info-text {
+    height: fit-content;
+    margin: 1rem 0 0;
+  }
+
+  .user-info-text h3 {
+    margin: 0 0 .5rem;
+  }
+
+  .comment-box blockquote {
+    margin: 2rem 0 1rem;
+  }
+}
+
+/* end centering user info text */
+
+@media only screen and (max-width: 700px) {
+  .background-top {
+    height: 20rem;
+  }
+
+  .background-bottom {
+    height: 60rem;
+    top: 50rem;
+  }
+
+  .top-content {
+    display: block;
+    padding: 7.5rem 10vw 3.5rem;
+    width: 100%;
+  }
+
+  .hero-message {
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+  }
+  
+  .hero-message h1 {
+    font-size: 4rem;
+  }
+
+  .reviews {
+    margin: 0 auto;
+    width: fit-content;
+  }
+
+  .star-review {
+    width: 80vw;
+  }
+
+  .star-review h2 {
+    margin-top: 1.5rem;
+  }
+
+  .five-stars {
+    margin: 0;
+    width: 25vw;
+  }
+
+  .testimonials {
+    display: block;
+    width: 100vw;
+  }
+
+  .comment-box {
+    height: fit-content;
+    margin: 0 auto 1.7rem;
+    padding: 3rem 10vw 2.5rem;
+    width: 80vw;
+  }
+
+  .comment-box blockquote {
+    margin: 2rem 0 0;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+
+  .top-content {
+    padding: 7.5rem 5vw 2rem;
+  }
+
+  .star-review {
+    width: 90vw;
+  }
+
+  .comment-box {
+    padding: 3rem 7vw 2.5rem;
+    width: 90vw;
+  }
+}
